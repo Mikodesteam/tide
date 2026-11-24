@@ -56,9 +56,17 @@ A Solana wallet for iOS, Android and web with a built-in social feed, swaps, and
 - **Operator panel only in operator builds**
 - **Optional realised tab, off by default and never ranked**
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**Fail-closed region gate**: [`snippets/jurisdiction_gate.dart`](snippets/jurisdiction_gate.dart). Copy execution is only enabled for a region the user has declared, and an unknown region is treated as restricted. The operator can add countries but can never remove the built-in baseline, so a bad configuration cannot switch the module on in a regulated market.
+Real excerpts from the source, shown for illustration:
+
+- **Fail-closed region gate** ([`snippets/jurisdiction_gate.dart`](snippets/jurisdiction_gate.dart)): Copy execution is only enabled for a region the user has declared, and an unknown region is treated as restricted. The operator can add countries but can never remove the built-in baseline, so a bad configuration cannot switch the module on in a regulated market.
+- **Operator fee that ships empty and is capped** ([`snippets/swap_fee_cap.dart`](snippets/swap_fee_cap.dart)): The swap fee is off by default, clamped to 2.00% in code whatever a remote file says, and only counts as active when a well-formed, non-placeholder wallet is set.
+- **Redaction at the logging boundary** ([`snippets/log_redactor.dart`](snippets/log_redactor.dart)): Recovery phrases, hex keys and base58 addresses or signatures are masked before a string can reach a log, a crash report or an operator console.
 
 ## Requirements (full version)
 
