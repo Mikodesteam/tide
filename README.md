@@ -8,6 +8,8 @@
   <b>Self-custodial Solana wallet with a social feed (Flutter).</b>
 </p>
 
+<p align="center"><sub>Solana wallet app source code · social feed & copy trading · Flutter iOS, Android & web · white-label</sub></p>
+
 <p align="center">
   <a href="https://tide-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://tide.mikodes.com/docs/"><b>Docs</b></a> ·
@@ -78,6 +80,20 @@ Real excerpts from the source, shown for illustration:
 - Apple Developer Program, enrolled as an organisation
 
 Not included: Hosting and domain; Third-party API subscriptions; Developer accounts; Blockchain network fees; A backend — TIDE has none by design.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete TIDE source code is sold at [store.mikodes.com/p/tide](https://store.mikodes.com/p/tide/).
+
+**What is TIDE built with?**  
+Flutter, Swift.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://tide-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
